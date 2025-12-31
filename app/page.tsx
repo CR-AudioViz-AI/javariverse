@@ -1,0 +1,1 @@
+'use client'; export default function Page() { return <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white"><div className="text-center"><h1 className="text-4xl font-bold mb-4">javariverse</h1><p>Part of CR AudioViz AI</p></div></div>; }
