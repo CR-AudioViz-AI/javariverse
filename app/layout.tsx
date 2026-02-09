@@ -1,6 +1,9 @@
-export const metadata = {
-  title: 'Javariverse',
-  description: 'Immersive virtual world powered by AI',
+import type { Metadata } from 'next'
+import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'JavariVerse - Immersive Virtual World',
+  description: 'Part of CR AudioViz AI',
 }
 
 export default function RootLayout({
@@ -10,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   )
 }
