@@ -1,1 +1,18 @@
-'use client'; export default function Page() { return <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white"><div className="text-center"><h1 className="text-4xl font-bold mb-4">javariverse</h1><p>Part of CR AudioViz AI</p></div></div>; }
+export default function Home() {
+  return (
+    <main style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '100vh',
+      fontSize: '3rem',
+      fontFamily: 'system-ui, sans-serif',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      color: 'white',
+      textAlign: 'center',
+      padding: '2rem'
+    }}>
+      Javariverse — Coming Alive.
+    </main>
+  )
+}
