@@ -1,10 +1,7 @@
 /**
- * JavariVerse - Standalone Homepage
- * 
- * Ported from CRAudioVizAI.com/javari-verse
- * Self-contained page with placeholder header/footer
- * 
- * @timestamp February 9, 2026 - 3:30 PM EST
+ * JavariVerse - Standalone Landing Page
+ * Recreated design from CRAudioVizAI reference
+ * @timestamp February 9, 2026
  */
 
 import { Metadata } from 'next';
@@ -12,11 +9,8 @@ import Link from 'next/link';
 import { ArrowRight, Globe, Users, Sparkles, Building2, Map, Gamepad2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'JavariVerse - Virtual World | Immersive AI Experience',
+  title: 'JavariVerse - Immersive Virtual World',
   description: 'Explore JavariVerse, an immersive virtual world powered by AI. Create avatars, build communities, and experience the future of digital interaction.',
-  alternates: {
-    canonical: 'https://javariverse.com',
-  },
 };
 
 const FEATURES = [
@@ -52,88 +46,89 @@ const FEATURES = [
   },
 ];
 
-export default function JavariVersePage() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900/20 to-slate-900">
-      {/* Placeholder Header */}
-      <header className="border-b border-cyan-500/20 bg-slate-900/50 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-cyan-400">JavariVerse</h1>
-            <div className="text-sm text-slate-400">Header Coming Soon</div>
-          </div>
-        </div>
-      </header>
-
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900/95 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-sm mb-6">
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-sm mb-6 animate-pulse">
             <Sparkles className="w-4 h-4" />
             Coming Soon
           </div>
-
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent">
-            Welcome to JavariVerse
+          
+          {/* Main Heading */}
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Welcome to{' '}
+            <span className="bg-gradient-to-r from-cyan-400 via-cyan-500 to-blue-500 bg-clip-text text-transparent">
+              JavariVerse
+            </span>
           </h1>
-
-          <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          
+          {/* Description */}
+          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
             An immersive virtual world where AI meets community. Create your avatar, 
             explore infinite landscapes, and connect with others in ways never before possible.
           </p>
-
+          
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="#waitlist"
-              className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-cyan-700 transition-all shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2"
-            >
+            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-xl font-semibold hover:from-cyan-400 hover:to-cyan-500 transition-all shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transform">
               Join the Waitlist
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              href="#features"
-              className="px-8 py-4 border-2 border-cyan-500/30 text-cyan-300 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all"
-            >
+              <ArrowRight className="w-5 h-5" />
+            </button>
+            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/20 text-white rounded-xl font-semibold hover:bg-white/5 hover:border-white/30 transition-all">
               Learn More
-            </Link>
+            </button>
           </div>
         </div>
-
-        {/* Decorative gradients */}
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl -z-10" />
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10" />
+        
+        {/* Decorative Background Elements */}
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl -z-0 animate-pulse" />
+        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl -z-0" />
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-0" />
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 px-4">
+      <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
               A New Kind of Virtual Experience
             </h2>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-              JavariVerse combines cutting-edge AI with immersive virtual environments 
-              to create something truly unique
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              JavariVerse combines cutting-edge AI with immersive virtual environments to create something truly unique
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Feature Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {FEATURES.map((feature, index) => {
               const Icon = feature.icon;
               return (
                 <div
                   key={index}
-                  className="p-6 bg-slate-900/50 border border-cyan-500/20 rounded-2xl hover:border-cyan-500/40 transition-all group"
+                  className="group relative bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:bg-slate-800/80 hover:border-cyan-500/30 transition-all duration-300 hover:scale-105 transform"
                 >
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform" />
+                  {/* Icon */}
+                  <div className="w-14 h-14 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Icon className="w-7 h-7 text-cyan-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
+                  
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-white mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-slate-400">
+                  
+                  {/* Description */}
+                  <p className="text-gray-400 leading-relaxed">
                     {feature.description}
                   </p>
+
+                  {/* Hover Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 rounded-2xl transition-all duration-300 -z-10" />
                 </div>
               );
             })}
@@ -141,36 +136,21 @@ export default function JavariVersePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="waitlist" className="py-20 px-4">
+      {/* Footer CTA */}
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="p-8 bg-gradient-to-r from-slate-900/50 to-slate-900/50 border border-cyan-500/20 rounded-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Be Among the First
-            </h2>
-            <p className="text-lg text-slate-300 mb-8">
-              Join the waitlist and get early access when JavariVerse launches
-            </p>
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-cyan-700 transition-all shadow-lg shadow-cyan-500/25"
-            >
-              Join Waitlist
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Enter the JavariVerse?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join the waitlist today and be among the first to experience the future of virtual worlds.
+          </p>
+          <button className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-cyan-500 transition-all shadow-2xl hover:shadow-cyan-500/50 hover:scale-105 transform">
+            Get Early Access
+            <ArrowRight className="w-6 h-6" />
+          </button>
         </div>
       </section>
-
-      {/* Placeholder Footer */}
-      <footer className="border-t border-cyan-500/20 bg-slate-900/50 backdrop-blur-sm mt-20">
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="text-center text-sm text-slate-400">
-            <p>Footer Coming Soon</p>
-            <p className="mt-2">© 2026 JavariVerse. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
