@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import EcosystemNav from '@/components/ecosystem/EcosystemNav'
+import EcosystemFooter from '@/components/ecosystem/EcosystemFooter'
+
 
 export const metadata: Metadata = {
   title: 'JavariVerse - Immersive Virtual World',
@@ -12,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body><EcosystemNav appName="Javariverse" />{children}<EcosystemFooter /></body>
     </html>
   )
 }
