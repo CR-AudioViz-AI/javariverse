@@ -1,21 +1,17 @@
+// app/layout.tsx — Javariverse
 import type { Metadata } from 'next'
-import EcosystemNav from '@/components/ecosystem/EcosystemNav'
-import EcosystemFooter from '@/components/ecosystem/EcosystemFooter'
-
-
+import './globals.css'
+export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
-  title: 'JavariVerse - Immersive Virtual World',
-  description: 'Part of CR AudioViz AI',
+  title: 'Javariverse | The Javari Virtual World',
+  description: 'Join Javariverse — the virtual world for creators, collectors, and community',
 }
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body><EcosystemNav appName="Javariverse" />{children}<EcosystemFooter /></body>
+      <body style={{ margin: 0, padding: 0 }}>
+        {children}
+      </body>
     </html>
   )
 }
