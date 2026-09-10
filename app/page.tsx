@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div style={{ background: '#0a0a0f', minHeight: '100vh', color: 'white', fontFamily: 'Inter, system-ui, sans-serif' }}>
       {/* NAV */}
-      <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: 'rgba(7,7,16,0.97)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(255,255,255,0.06)', height: 58, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 24px' }}>
+      <nav data-app-chrome style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: 'rgba(7,7,16,0.97)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(255,255,255,0.06)', height: 58, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 24px' }}>
         <a href="https://craudiovizai.com" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
           <span style={{ fontSize: 18 }}>🌐</span>
           <span style={{ fontWeight: 800, fontSize: 15, background: 'linear-gradient(135deg, ' + C + ', #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Javariverse</span>
@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ background: '#030308', borderTop: '1px solid rgba(255,255,255,0.04)', padding: '32px 24px', textAlign: 'center' }}>
+      <footer data-app-chrome style={{ background: '#030308', borderTop: '1px solid rgba(255,255,255,0.04)', padding: '32px 24px', textAlign: 'center' }}>
         <p style={{ color: '#374151', fontSize: 12, margin: '0 0 8px' }}>© 2026 CR AudioViz AI, LLC — EIN: 39-3646201 · Fort Myers, Florida</p>
         <p style={{ color: '#1f2937', fontSize: 12, margin: 0 }}>Your Story. Our Design. Everyone Connects. Everyone Wins.</p>
       </footer>
